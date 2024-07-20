@@ -1,0 +1,287 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <conio.h>
+
+// Global declarations for variables
+char operation, yes_no;
+int num;
+float answer;
+float ope1, ope2, ope3, ope4, ope5, ope6, ope7, ope8, ope9, ope10;
+
+// Global declarations for functions
+float addition(), subtraction(), product(), division();
+void Ask_user(), resume();
+
+// Addition function to perform addition operation
+float addition() {
+    printf("\nHow many operands (maximum 10) would you like to add? ");
+    scanf("%d", &num);
+
+    switch(num) {
+        case 0:
+        case 1:
+            printf("At least two operands are required for addition.\n");
+            break;
+        case 2:
+            printf("\nEnter values for %d operands: ", num);
+            scanf("%f %f", &ope1, &ope2);
+            answer = ope1 + ope2;
+            break;
+        case 3:
+            printf("\nEnter values for %d operands: ", num);
+            scanf("%f %f %f", &ope1, &ope2, &ope3);
+            answer = ope1 + ope2 + ope3;
+            break;
+        case 4:
+            printf("\nEnter values for %d operands: ", num);
+            scanf("%f %f %f %f", &ope1, &ope2, &ope3, &ope4);
+            answer = ope1 + ope2 + ope3 + ope4;
+            break;
+        case 5:
+            printf("\nEnter values for %d operands: ", num);
+            scanf("%f %f %f %f %f", &ope1, &ope2, &ope3, &ope4, &ope5);
+            answer = ope1 + ope2 + ope3 + ope4 + ope5;
+            break;
+        case 6:
+            printf("\nEnter values for %d operands: ", num);
+            scanf("%f %f %f %f %f %f", &ope1, &ope2, &ope3, &ope4, &ope5, &ope6);
+            answer = ope1 + ope2 + ope3 + ope4 + ope5 + ope6;
+            break;
+        case 7:
+            printf("\nEnter values for %d operands: ", num);
+            scanf("%f %f %f %f %f %f %f", &ope1, &ope2, &ope3, &ope4, &ope5, &ope6, &ope7);
+            answer = ope1 + ope2 + ope3 + ope4 + ope5 + ope6 + ope7;
+            break;
+        case 8:
+            printf("\nEnter values for %d operands: ", num);
+            scanf("%f %f %f %f %f %f %f %f", &ope1, &ope2, &ope3, &ope4, &ope5, &ope6, &ope7, &ope8);
+            answer = ope1 + ope2 + ope3 + ope4 + ope5 + ope6 + ope7 + ope8;
+            break;
+        case 9:
+            printf("\nEnter values for %d operands: ", num);
+            scanf("%f %f %f %f %f %f %f %f %f", &ope1, &ope2, &ope3, &ope4, &ope5, &ope6, &ope7, &ope8, &ope9);
+            answer = ope1 + ope2 + ope3 + ope4 + ope5 + ope6 + ope7 + ope8 + ope9;
+            break;
+        case 10:
+            printf("\nEnter values for %d operands: ", num);
+            scanf("%f %f %f %f %f %f %f %f %f %f", &ope1, &ope2, &ope3, &ope4, &ope5, &ope6, &ope7, &ope8, &ope9, &ope10);
+            answer = ope1 + ope2 + ope3 + ope4 + ope5 + ope6 + ope7 + ope8 + ope9 + ope10;
+            break;
+        default:
+            printf("\nInvalid number of operands. Please enter a number between 2 and 10.\n");
+            break;
+    }
+
+    return answer;
+}
+
+// Subtraction function to perform subtraction operation
+float subtraction() {
+    printf("\nHow many operands (maximum 10) would you like to subtract? ");
+    scanf("%d", &num);
+
+    switch(num) {
+        case 0:
+        case 1:
+            printf("At least two operands are required for subtraction.\n");
+            break;
+        case 2:
+            printf("\nEnter values for %d operands: ", num);
+            scanf("%f %f", &ope1, &ope2);
+            answer = ope1 - ope2;
+            break;
+        case 3:
+            printf("\nEnter values for %d operands: ", num);
+            scanf("%f %f %f", &ope1, &ope2, &ope3);
+            answer = ope1 - ope2 - ope3;
+            break;
+        case 4:
+            printf("\nEnter values for %d operands: ", num);
+            scanf("%f %f %f %f", &ope1, &ope2, &ope3, &ope4);
+            answer = ope1 - ope2 - ope3 - ope4;
+            break;
+        case 5:
+            printf("\nEnter values for %d operands: ", num);
+            scanf("%f %f %f %f %f", &ope1, &ope2, &ope3, &ope4, &ope5);
+            answer = ope1 - ope2 - ope3 - ope4 - ope5;
+            break;
+        case 6:
+            printf("\nEnter values for %d operands: ", num);
+            scanf("%f %f %f %f %f %f", &ope1, &ope2, &ope3, &ope4, &ope5, &ope6);
+            answer = ope1 - ope2 - ope3 - ope4 - ope5 - ope6;
+            break;
+        case 7:
+            printf("\nEnter values for %d operands: ", num);
+            scanf("%f %f %f %f %f %f %f", &ope1, &ope2, &ope3, &ope4, &ope5, &ope6, &ope7);
+            answer = ope1 - ope2 - ope3 - ope4 - ope5 - ope6 - ope7;
+            break;
+        case 8:
+            printf("\nEnter values for %d operands: ", num);
+            scanf("%f %f %f %f %f %f %f %f", &ope1, &ope2, &ope3, &ope4, &ope5, &ope6, &ope7, &ope8);
+            answer = ope1 - ope2 - ope3 - ope4 - ope5 - ope6 - ope7 - ope8;
+            break;
+        case 9:
+            printf("\nEnter values for %d operands: ", num);
+            scanf("%f %f %f %f %f %f %f %f %f", &ope1, &ope2, &ope3, &ope4, &ope5, &ope6, &ope7, &ope8, &ope9);
+            answer = ope1 - ope2 - ope3 - ope4 - ope5 - ope6 - ope7 - ope8 - ope9;
+            break;
+        case 10:
+            printf("\nEnter values for %d operands: ", num);
+            scanf("%f %f %f %f %f %f %f %f %f %f", &ope1, &ope2, &ope3, &ope4, &ope5, &ope6, &ope7, &ope8, &ope9, &ope10);
+            answer = ope1 - ope2 - ope3 - ope4 - ope5 - ope6 - ope7 - ope8 - ope9 - ope10;
+            break;
+        default:
+            printf("\nInvalid number of operands. Please enter a number between 2 and 10.\n");
+            break;
+    }
+
+    return answer;
+}
+
+// Multiplication function to perform multiplication operation
+float product() {
+    printf("\nHow many operands (maximum 10) would you like to multiply? ");
+    scanf("%d", &num);
+
+    switch(num) {
+        case 0:
+        case 1:
+            printf("At least two operands are required for multiplication.\n");
+            break;
+        case 2:
+            printf("\nEnter values for %d operands: ", num);
+            scanf("%f %f", &ope1, &ope2);
+            answer = ope1 * ope2;
+            break;
+        case 3:
+            printf("\nEnter values for %d operands: ", num);
+            scanf("%f %f %f", &ope1, &ope2, &ope3);
+            answer = ope1 * ope2 * ope3;
+            break;
+        case 4:
+            printf("\nEnter values for %d operands: ", num);
+            scanf("%f %f %f %f", &ope1, &ope2, &ope3, &ope4);
+            answer = ope1 * ope2 * ope3 * ope4;
+            break;
+        case 5:
+            printf("\nEnter values for %d operands: ", num);
+            scanf("%f %f %f %f %f", &ope1, &ope2, &ope3, &ope4, &ope5);
+            answer = ope1 * ope2 * ope3 * ope4 * ope5;
+            break;
+        case 6:
+            printf("\nEnter values for %d operands: ", num);
+            scanf("%f %f %f %f %f %f", &ope1, &ope2, &ope3, &ope4, &ope5, &ope6);
+            answer = ope1 * ope2 * ope3 * ope4 * ope5 * ope6;
+            break;
+        case 7:
+            printf("\nEnter values for %d operands: ", num);
+            scanf("%f %f %f %f %f %f %f", &ope1, &ope2, &ope3, &ope4, &ope5, &ope6, &ope7);
+            answer = ope1 * ope2 * ope3 * ope4 * ope5 * ope6 * ope7;
+            break;
+        case 8:
+            printf("\nEnter values for %d operands: ", num);
+            scanf("%f %f %f %f %f %f %f %f", &ope1, &ope2, &ope3, &ope4, &ope5, &ope6, &ope7, &ope8);
+            answer = ope1 * ope2 * ope3 * ope4 * ope5 * ope6 * ope7 * ope8;
+            break;
+        case 9:
+            printf("\nEnter values for %d operands: ", num);
+            scanf("%f %f %f %f %f %f %f %f %f", &ope1, &ope2, &ope3, &ope4, &ope5, &ope6, &ope7, &ope8, &ope9);
+            answer = ope1 * ope2 * ope3 * ope4 * ope5 * ope6 * ope7 * ope8 * ope9;
+            break;
+        case 10:
+            printf("\nEnter values for %d operands: ", num);
+            scanf("%f %f %f %f %f %f %f %f %f %f", &ope1, &ope2, &ope3, &ope4, &ope5, &ope6, &ope7, &ope8, &ope9, &ope10);
+            answer = ope1 * ope2 * ope3 * ope4 * ope5 * ope6 * ope7 * ope8 * ope9 * ope10;
+            break;
+        default:
+            printf("\nInvalid number of operands. Please enter a number between 2 and 10.\n");
+            break;
+    }
+
+    return answer;
+}
+
+// Division function to perform division operation
+float division() {
+    printf("\nHow many operands (maximum 10) would you like to divide? ");
+    scanf("%d", &num);
+
+    if (num < 2) {
+        printf("At least two operands are required for division.\n");
+        return 0;
+    }
+
+    printf("\nEnter values for %d operands: ", num);
+    float result;
+    scanf("%f", &result);
+    
+    for (int i = 1; i < num; i++) {
+        scanf("%f", &ope1);
+        if (ope1 == 0) {
+            printf("Division by zero is not allowed.\n");
+            return 0;
+        }
+        result /= ope1;
+    }
+    
+    return result;
+}
+
+// Function to ask the user which operation they want to perform
+void Ask_user() {
+    printf("\nSelect the operation you want to perform: \n");
+    printf("A. Addition\n");
+    printf("S. Subtraction\n");
+    printf("M. Multiplication\n");
+    printf("D. Division\n");
+    printf("Q. Quit\n");
+    printf("Enter your choice: ");
+    operation = getche();
+    printf("\n");
+}
+
+// Function to resume or exit the calculator program
+void resume() {
+    printf("\nWould you like to perform another calculation? (Y/N): ");
+    yes_no = getche();
+    printf("\n");
+}
+
+int main() {
+    do {
+        Ask_user();
+
+        switch(operation) {
+            case 'A':
+            case 'a':
+                answer = addition();
+                printf("The result of addition is: %.2f\n", answer);
+                break;
+            case 'S':
+            case 's':
+                answer = subtraction();
+                printf("The result of subtraction is: %.2f\n", answer);
+                break;
+            case 'M':
+            case 'm':
+                answer = product();
+                printf("The result of multiplication is: %.2f\n", answer);
+                break;
+            case 'D':
+            case 'd':
+                answer = division();
+                printf("The result of division is: %.2f\n", answer);
+                break;
+            case 'Q':
+            case 'q':
+                printf("Thank you for using the calculator. Goodbye!\n");
+                return 0;
+            default:
+                printf("Invalid choice. Please select a valid operation.\n");
+                break;
+        }
+        resume();
+    } while(yes_no == 'Y' || yes_no == 'y');
+
+    return 0;
+}
